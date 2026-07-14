@@ -22,6 +22,7 @@
         <nav class="nav-links" aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#products">Products</a>
+          <a href="#checkout">Checkout</a>
           <a href="#faq">FAQ</a>
           <a class="nav-cta" href="https://wa.me/27655183942?text=Hello%20Zimkhitha%2C%20I%20would%20love%20to%20learn%20more%20about%20your%20Forever%20Living%20products%20and%20wellness%20support.%20Please%20guide%20me%20with%20the%20best%20options%20for%20me." target="_blank" rel="noreferrer">WhatsApp</a>
         </nav>
@@ -131,34 +132,151 @@
 
         <section id="products" class="section reveal" data-aos="fade-up" data-aos-duration="700">
           <div class="section-heading">
-            <p class="eyebrow">Featured products</p>
-            <h2>Wellness essentials that bring everyday balance.</h2>
-          </div>
-          <div class="product-grid">
-            <article class="product-card">
-              <img src="WhatsApp%20Image%202026-07-06%20at%202.09.06%20PM%20(1).jpeg" alt="Forever Living Aloe Vera Gel product" />
-              <h3>Aloe Vera Gel</h3>
-              <p>Daily hydration and a refreshing wellness foundation.</p>
-              <a class="text-link" href="https://wa.me/27655183942?text=Hello%20Zimkhitha%2C%20I%20would%20like%20to%20ask%20about%20the%20availability%20of%20Aloe%20Vera%20Gel%20and%20your%20recommendation." target="_blank" rel="noreferrer">Ask for availability</a>
-            </article>
-            <article class="product-card">
-              <img src="WhatsApp%20Image%202026-07-06%20at%202.09.07%20PM%20(1).jpeg" alt="Forever Living bee honey product" />
-              <h3>Forever Bee Honey</h3>
-              <p>Natural sweetness with the comfort of a daily wellness staple.</p>
-              <a class="text-link" href="https://wa.me/27655183942?text=Hello%20Zimkhitha%2C%20I%20would%20like%20to%20order%20Forever%20Bee%20Honey%20and%20learn%20more%20about%20delivery%20and%20payment%20options." target="_blank" rel="noreferrer">Order now</a>
-            </article>
-            <article class="product-card">
-              <img src="WhatsApp%20Image%202026-07-06%20at%202.09.07%20PM%20(3).jpeg" alt="Forever Living nutrition product" />
-              <h3>Daily Nutrition Blend</h3>
-              <p>A simple support product for busy days and balanced routines.</p>
-              <a class="text-link" href="https://wa.me/27655183942?text=Hello%20Zimkhitha%2C%20please%20send%20me%20details%20about%20the%20Daily%20Nutrition%20Blend%20and%20how%20it%20supports%20my%20routine." target="_blank" rel="noreferrer">Get details</a>
-            </article>
+            <p class="eyebrow">Online store</p>
+            <h2>Browse the official Forever catalogue, add what you need, and place your order online.</h2>
+            <p class="section-intro">
+              Product information below is structured from the official Forever Southern Africa training presentation. Pricing and availability
+              remain editable placeholders until confirmed.
+            </p>
           </div>
 
-          <div class="image-gallery">
-            <img src="WhatsApp%20Image%202026-07-06%20at%202.09.07%20PM%20(4).jpeg" alt="Forever Living product collection" />
-            <img src="WhatsApp%20Image%202026-07-06%20at%202.09.07%20PM%20(5).jpeg" alt="Wellness product display" />
-            <img src="WhatsApp%20Image%202026-07-06%20at%202.09.07%20PM%20(6).jpeg" alt="Premium wellness products" />
+          <div class="store-shell" aria-labelledby="store-heading">
+            <div class="store-toolbar" role="search">
+              <div class="search-field">
+                <label class="sr-only" for="product-search">Search products</label>
+                <input id="product-search" type="search" placeholder="Search by product name or category" autocomplete="off" />
+              </div>
+              <div class="filter-row" aria-label="Product filters">
+                <button class="filter-chip is-active" type="button" data-filter="all">All Products</button>
+                <button class="filter-chip" type="button" data-filter="Forever Drinks">Drinks</button>
+                <button class="filter-chip" type="button" data-filter="Personal Care Products">Personal Care</button>
+                <button class="filter-chip" type="button" data-filter="Skin Care Products">Skin Care</button>
+                <button class="filter-chip" type="button" data-filter="Weight Management">Weight Management</button>
+                <button class="filter-chip" type="button" data-filter="Nutritional Products">Nutritional Products</button>
+                <button class="filter-chip" type="button" data-filter="Combo Packs">Combo Packs</button>
+                <button class="filter-clear" type="button" id="clear-filters">Clear Filters</button>
+              </div>
+            </div>
+
+            <div class="store-meta">
+              <p id="store-heading" class="store-count" aria-live="polite">Loading catalogue...</p>
+              <a class="text-link" href="#checkout">Go to checkout</a>
+            </div>
+
+            <div id="product-grid" class="catalogue-grid" aria-live="polite"></div>
+
+            <div class="catalogue-notice">
+              <p>
+                Product information is intended for general reference and should not replace professional medical advice. Weight-management
+                results vary and work best alongside balanced nutrition and exercise. Cosmetic products are for external use, and a patch test is
+                recommended if you are unsure about sensitivity.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="checkout" class="section reveal" data-aos="fade-up" data-aos-duration="700">
+          <div class="section-heading">
+            <p class="eyebrow">Checkout</p>
+            <h2>Review your order, add delivery details, and place your order request.</h2>
+          </div>
+
+          <div class="checkout-layout">
+            <form id="checkout-form" class="checkout-form-panel" novalidate>
+              <div class="checkout-grid">
+                <label>
+                  First name
+                  <input type="text" name="firstName" required autocomplete="given-name" />
+                </label>
+                <label>
+                  Last name
+                  <input type="text" name="lastName" required autocomplete="family-name" />
+                </label>
+                <label>
+                  Email address
+                  <input type="email" name="email" required autocomplete="email" />
+                </label>
+                <label>
+                  Mobile number
+                  <input type="tel" name="mobile" required autocomplete="tel" />
+                </label>
+                <label class="field-span-2">
+                  Street address
+                  <input type="text" name="streetAddress" required autocomplete="street-address" />
+                </label>
+                <label>
+                  Suburb
+                  <input type="text" name="suburb" required autocomplete="address-level3" />
+                </label>
+                <label>
+                  City or town
+                  <input type="text" name="city" required autocomplete="address-level2" />
+                </label>
+                <label>
+                  Province
+                  <input type="text" name="province" required autocomplete="address-level1" />
+                </label>
+                <label>
+                  Postal code
+                  <input type="text" name="postalCode" required autocomplete="postal-code" />
+                </label>
+                <label>
+                  Delivery method
+                  <select name="deliveryMethod" id="delivery-method" required></select>
+                </label>
+                <label class="field-span-2">
+                  Delivery notes
+                  <textarea name="deliveryNotes" rows="3" placeholder="Optional notes for delivery or collection."></textarea>
+                </label>
+              </div>
+
+              <label class="consent-row">
+                <input type="checkbox" name="orderUpdatesConsent" required />
+                <span>I consent to receive transactional order updates by email and WhatsApp.</span>
+              </label>
+
+              <div class="checkout-actions">
+                <button type="submit" class="btn btn-primary">Place Order</button>
+                <p class="checkout-note">Payment remains pending until secure payment or manual payment instructions are confirmed.</p>
+              </div>
+            </form>
+
+            <aside class="order-summary-panel" aria-labelledby="order-summary-heading">
+              <div>
+                <p class="eyebrow">Order summary</p>
+                <h3 id="order-summary-heading">Your order at a glance</h3>
+              </div>
+              <div id="checkout-order-items" class="summary-items"></div>
+              <dl class="summary-totals">
+                <div>
+                  <dt>Subtotal</dt>
+                  <dd id="checkout-subtotal">Price to be confirmed</dd>
+                </div>
+                <div>
+                  <dt>Delivery fee</dt>
+                  <dd id="checkout-delivery">Delivery fee to be confirmed</dd>
+                </div>
+                <div class="summary-total">
+                  <dt>Total</dt>
+                  <dd id="checkout-total">Price to be confirmed</dd>
+                </div>
+              </dl>
+              <p class="summary-note">
+                Future Yoco checkout, invoice generation, order-notification automation, and secure backend processing will connect here in a later phase.
+              </p>
+            </aside>
+          </div>
+        </section>
+
+        <section id="order-confirmation" class="section confirmation-section reveal is-hidden" data-aos="fade-up" data-aos-duration="700" aria-live="polite">
+          <div class="confirmation-card">
+            <p class="eyebrow">Order confirmation</p>
+            <h2>Thank you. Your order request has been received.</h2>
+            <div id="confirmation-content" class="confirmation-content"></div>
+            <div class="confirmation-actions">
+              <a class="btn btn-secondary" href="#products">Return to shopping</a>
+              <a id="confirmation-whatsapp" class="btn btn-primary" href="https://wa.me/27655183942" target="_blank" rel="noreferrer">Have a question about this order?</a>
+            </div>
           </div>
         </section>
 
@@ -231,7 +349,7 @@
             <div class="contact-copy">
               <p class="eyebrow">Contact</p>
               <h2>Ready to begin your wellness routine?</h2>
-              <p>Send a quick message and I’ll help you find the right products and next steps. You can also reach me at <a href="mailto:zmanxiwa@gmail.com">zmanxiwa@gmail.com</a>.</p>
+              <p>Send a quick message and I’ll help you find the right products and next steps. You can also reach me at <a href="mailto:zimforever1@gmail.com">zimforever1@gmail.com</a>.</p>
               <div class="social-actions">
                 <a class="btn btn-primary" href="https://wa.me/27655183942?text=Hello%20Zimkhitha%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20Forever%20Living%20products%20and%20wellness%20support.%20Please%20guide%20me%20with%20the%20best%20options%20for%20me." target="_blank" rel="noreferrer">WhatsApp</a>
                 <a class="btn btn-secondary" href="https://www.facebook.com/Zimkhithahealthclub" target="_blank" rel="noreferrer">Facebook</a>
@@ -245,7 +363,7 @@
               </label>
               <label>
                 Email
-                <input type="email" name="email" value="zmanxiwa@gmail.com" placeholder="zmanxiwa@gmail.com" required />
+                <input type="email" name="email" value="zimforever1@gmail.com" placeholder="zimforever1@gmail.com" required />
               </label>
               <label>
                 Tell me what you need
@@ -289,8 +407,10 @@
       <div>
         <h4>Quick links</h4>
         <a href="#products">Products</a>
+        <a href="#checkout">Checkout</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
+        <a href="admin.html">Admin preview</a>
       </div>
       <div>
         <h4>Connect</h4>
@@ -301,11 +421,62 @@
       <p class="footer-note">© 2026 Zimkhitha Manxiwa. All rights reserved.</p>
     </footer>
 
+    <button class="cart-float" type="button" id="cart-toggle" aria-label="Open shopping cart" aria-controls="cart-drawer" aria-expanded="false">
+      <span class="cart-float-icon">🛒</span>
+      <span class="cart-float-label">Cart</span>
+      <span id="cart-count-badge" class="cart-count-badge">0</span>
+    </button>
+
+    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cart-heading">
+      <div class="cart-drawer-header">
+        <div>
+          <p class="eyebrow">Cart</p>
+          <h2 id="cart-heading">Your selected products</h2>
+        </div>
+        <button type="button" class="icon-button" id="cart-close" aria-label="Close shopping cart">×</button>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <dl class="cart-summary">
+        <div>
+          <dt>Items</dt>
+          <dd id="cart-item-count">0</dd>
+        </div>
+        <div>
+          <dt>Subtotal</dt>
+          <dd id="cart-subtotal">Price to be confirmed</dd>
+        </div>
+        <div>
+          <dt>Delivery fee</dt>
+          <dd id="cart-delivery-fee">Delivery fee to be confirmed</dd>
+        </div>
+        <div class="summary-total">
+          <dt>Total</dt>
+          <dd id="cart-total">Price to be confirmed</dd>
+        </div>
+      </dl>
+      <div class="cart-actions">
+        <button type="button" class="btn btn-secondary" id="clear-cart">Clear cart</button>
+        <a class="btn btn-primary" href="#checkout" id="cart-checkout-link">Proceed to checkout</a>
+      </div>
+    </aside>
+
+    <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+
+    <div id="product-modal" class="product-modal" hidden>
+      <div class="product-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button type="button" class="icon-button modal-close" id="modal-close" aria-label="Close product details">×</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
     <a class="whatsapp-float" href="https://wa.me/27655183942?text=Hello%20Zimkhitha%2C%20I%20am%20interested%20in%20your%20wellness%20products%20and%20I%20would%20love%20to%20hear%20your%20recommendations%20for%20me." target="_blank" rel="noreferrer" aria-label="Contact via WhatsApp">
       💬
     </a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="product-data.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

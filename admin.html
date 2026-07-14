@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="Development-only preview for locally stored Forever Living landing-page test orders." />
+    <title>Admin Preview | Zimkhitha Manxiwa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="index.html#hero">
+          <span class="brand-mark">🌿</span>
+          <span>Zimkhitha Manxiwa</span>
+        </a>
+        <nav class="nav-links" aria-label="Admin navigation">
+          <a href="index.html#products">Store</a>
+          <a href="index.html#checkout">Checkout</a>
+          <a class="nav-cta" href="index.html">Back to landing page</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="admin-preview-card">
+            <div class="admin-header">
+              <div>
+                <p class="eyebrow">Development preview</p>
+                <h1>Local Order Management Preview</h1>
+                <p class="admin-note">
+                  This page is for local development only. It reads test orders from this browser's localStorage and is not a secure production dashboard.
+                </p>
+              </div>
+              <a class="btn btn-secondary" href="index.html#products">Return to shopping</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div id="admin-orders" class="admin-order-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
